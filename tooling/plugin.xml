@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            name="Tooling Diagram Type"
+            type="OpenShift"
+            id="tooling.OpenShiftDiagramType">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            name="Tooling Diagram Type Provider"
+            class="tooling.diagram.OpenShiftDiagramTypeProvider"
+            id="tooling.OpenShiftDiagramTypeProvider">
+         <diagramType
+               id="tooling.OpenShiftDiagramType">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+
+</plugin>

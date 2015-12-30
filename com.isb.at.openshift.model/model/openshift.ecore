@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="openshift" nsURI="http://www.example.org/openshift" nsPrefix="openshift">
+  <eClassifiers xsi:type="ecore:EClass" name="Template">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="templateHasServices" lowerBound="1"
+        upperBound="-1" eType="#//Service"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pod">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="podHasProducts" lowerBound="1"
+        upperBound="-1" eType="#//Product"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceManagePod" lowerBound="1"
+        eType="#//Pod"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Product" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="productoBelongsImageStream"
+        eType="#//ImageStream"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImageStream"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReplicationController">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rcManagePod" lowerBound="1"
+        eType="#//Pod"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="replicas" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeploymentConfig">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dcManagePod" lowerBound="1"
+        eType="#//Pod"/>
+  </eClassifiers>
+</ecore:EPackage>

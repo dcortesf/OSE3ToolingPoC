@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.isb.at.openshift.model/src" modelPluginID="com.isb.at.openshift.model"
+    modelName="Openshift" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>openshift.ecore</foreignModel>
+  <genPackages prefix="Openshift" disposableProviderFactory="true" ecorePackage="openshift.ecore#/">
+    <genClasses ecoreClass="openshift.ecore#//Template">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference openshift.ecore#//Template/templateHasServices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openshift.ecore#//Template/name"/>
+    </genClasses>
+    <genClasses ecoreClass="openshift.ecore#//Pod">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference openshift.ecore#//Pod/podHasProducts"/>
+    </genClasses>
+    <genClasses ecoreClass="openshift.ecore#//Service">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference openshift.ecore#//Service/serviceManagePod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openshift.ecore#//Service/name"/>
+    </genClasses>
+    <genClasses ecoreClass="openshift.ecore#//Product">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference openshift.ecore#//Product/productoBelongsImageStream"/>
+    </genClasses>
+    <genClasses ecoreClass="openshift.ecore#//ImageStream"/>
+    <genClasses ecoreClass="openshift.ecore#//ReplicationController">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference openshift.ecore#//ReplicationController/rcManagePod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openshift.ecore#//ReplicationController/replicas"/>
+    </genClasses>
+    <genClasses ecoreClass="openshift.ecore#//DeploymentConfig">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference openshift.ecore#//DeploymentConfig/dcManagePod"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

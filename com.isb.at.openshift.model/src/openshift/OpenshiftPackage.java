@@ -85,13 +85,22 @@ public interface OpenshiftPackage extends EPackage {
 	int TEMPLATE__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE__DESCRIPTION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Template</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_FEATURE_COUNT = 2;
+	int TEMPLATE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Template</em>' class.
@@ -367,6 +376,17 @@ public interface OpenshiftPackage extends EPackage {
 	EAttribute getTemplate_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link openshift.Template#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see openshift.Template#getDescription()
+	 * @see #getTemplate()
+	 * @generated
+	 */
+	EAttribute getTemplate_Description();
+
+	/**
 	 * Returns the meta object for class '{@link openshift.Pod <em>Pod</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -551,6 +571,14 @@ public interface OpenshiftPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEMPLATE__NAME = eINSTANCE.getTemplate_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEMPLATE__DESCRIPTION = eINSTANCE.getTemplate_Description();
 
 		/**
 		 * The meta object literal for the '{@link openshift.impl.PodImpl <em>Pod</em>}' class.

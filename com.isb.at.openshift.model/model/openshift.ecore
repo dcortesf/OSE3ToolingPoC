@@ -5,6 +5,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="templateHasServices" lowerBound="1"
         upperBound="-1" eType="#//Service"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pod">
     <eStructuralFeatures xsi:type="ecore:EReference" name="podHasProducts" lowerBound="1"

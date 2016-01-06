@@ -1,13 +1,16 @@
 package tooling.features.template;
 
+import java.util.List;
+
+import openshift.OpenshiftFactory;
+import openshift.Template;
+
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.features.ICreateFeature;
 import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.ICreateContext;
 import org.eclipse.graphiti.features.impl.AbstractCreateFeature;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-
-import openshift.OpenshiftFactory;
-import openshift.Template;
 
 public class CreateTemplateFeature extends AbstractCreateFeature implements
 		ICreateFeature {
@@ -23,7 +26,22 @@ public class CreateTemplateFeature extends AbstractCreateFeature implements
 
 	@Override
 	public Object[] create(ICreateContext context) {
-		 String newClassName = "Template";
+		
+		Template tSelect = null;
+		String newClassName = "Template";
+		
+		if(context.getTargetContainer().getLink()!=null){
+
+			List<EObject> containerObjects = context.getTargetContainer().getLink().getBusinessObjects();
+			
+			if(containerObjects!=null){
+		
+				tSelect=(Template)containerObjects.get(0);		 
+				if(tSelect.getName()!=null) newClassName = tSelect.getName();
+			}
+		}
+		 
+		 		 
 	     if (newClassName == null || newClassName.trim().length() == 0) {
 	            return EMPTY;
 	      }
@@ -39,6 +57,9 @@ public class CreateTemplateFeature extends AbstractCreateFeature implements
 	 
 	        // do the add
 	        addGraphicalRepresentation(context, newClass);
+	        
+	     // activate direct editing after object creation
+	       getFeatureProvider().getDirectEditingInfo().setActive(true);
 	 
 	        // return newly created business object(s)
 	        return new Object[] { newClass };

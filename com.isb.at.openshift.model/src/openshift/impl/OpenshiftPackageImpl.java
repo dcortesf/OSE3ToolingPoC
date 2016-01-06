@@ -168,6 +168,15 @@ public class OpenshiftPackageImpl extends EPackageImpl implements OpenshiftPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTemplate_Description() {
+		return (EAttribute)templateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPod() {
 		return podEClass;
 	}
@@ -311,6 +320,7 @@ public class OpenshiftPackageImpl extends EPackageImpl implements OpenshiftPacka
 		templateEClass = createEClass(TEMPLATE);
 		createEReference(templateEClass, TEMPLATE__TEMPLATE_HAS_SERVICES);
 		createEAttribute(templateEClass, TEMPLATE__NAME);
+		createEAttribute(templateEClass, TEMPLATE__DESCRIPTION);
 
 		podEClass = createEClass(POD);
 		createEReference(podEClass, POD__POD_HAS_PRODUCTS);
@@ -365,6 +375,7 @@ public class OpenshiftPackageImpl extends EPackageImpl implements OpenshiftPacka
 		initEClass(templateEClass, Template.class, "Template", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplate_TemplateHasServices(), this.getService(), null, "templateHasServices", null, 1, -1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTemplate_Name(), ecorePackage.getEString(), "name", null, 0, 1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTemplate_Description(), ecorePackage.getEString(), "description", null, 0, 1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(podEClass, Pod.class, "Pod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPod_PodHasProducts(), this.getProduct(), null, "podHasProducts", null, 1, -1, Pod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -12,6 +12,9 @@
               <children xmi:type="notation:Node" xmi:id="_DEcz0K1QEeWTSPgawmoa3g" type="3010" element="_DEAu8K1QEeWTSPgawmoa3g">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_DEcz0a1QEeWTSPgawmoa3g"/>
               </children>
+              <children xmi:type="notation:Node" xmi:id="_-BID4LSiEeWnsLwqpEk88g" type="3010" element="_-ADs4LSiEeWnsLwqpEk88g">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_-BID4bSiEeWnsLwqpEk88g"/>
+              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_26iPoam1EeWTSPgawmoa3g"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_26iPoqm1EeWTSPgawmoa3g"/>
             </children>
@@ -265,15 +268,15 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_J3nwwK1QEeWTSPgawmoa3g" backgroundStyle="Liquid">
-          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_J3nwwa1QEeWTSPgawmoa3g"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_BeF6ALSjEeWnsLwqpEk88g" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_BeF6AbSjEeWnsLwqpEk88g"/>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
-          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_J3nwwq1QEeWTSPgawmoa3g"/>
-          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_J3nww61QEeWTSPgawmoa3g" red="255" green="255" blue="255"/>
-          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_J3nwxK1QEeWTSPgawmoa3g" red="255" green="252" blue="216"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_BeF6ArSjEeWnsLwqpEk88g"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_BeF6A7SjEeWnsLwqpEk88g" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_BeF6BLSjEeWnsLwqpEk88g" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DEAu8K1QEeWTSPgawmoa3g" name="name : EString" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@2e8ae32d{platform:/resource/com.isb.at.openshift.model/model/openshift.ecore#//Template/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DEAu8K1QEeWTSPgawmoa3g" name="name : EString" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="openshift.ecore#//Template/name"/>
           <semanticElements xmi:type="ecore:EAttribute" href="openshift.ecore#//Template/name"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_J3qNAK1QEeWTSPgawmoa3g" labelAlignment="LEFT">
@@ -281,6 +284,17 @@
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_J3qNAq1QEeWTSPgawmoa3g"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_J3qNA61QEeWTSPgawmoa3g"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-ADs4LSiEeWnsLwqpEk88g" name="description : EString" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@3681f437{platform:/resource/com.isb.at.openshift.model/model/openshift.ecore#//Template/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+          <target xmi:type="ecore:EAttribute" href="openshift.ecore#//Template/description"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="openshift.ecore#//Template/description"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_BeLZkLSjEeWnsLwqpEk88g" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_BeLZkbSjEeWnsLwqpEk88g"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_BeLZkrSjEeWnsLwqpEk88g"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_BeLZk7SjEeWnsLwqpEk88g"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
@@ -314,7 +328,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_zLQu5K5SEeWTSPgawmoa3g" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_vHwdMK5SEeWTSPgawmoa3g" name="name : EString" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@68f91c88{platform:/resource/com.isb.at.openshift.model/model/openshift.ecore#//Service/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_vHwdMK5SEeWTSPgawmoa3g" name="name : EString" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="openshift.ecore#//Service/name"/>
           <semanticElements xmi:type="ecore:EAttribute" href="openshift.ecore#//Service/name"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_zLSkEK5SEeWTSPgawmoa3g" labelAlignment="LEFT">
@@ -429,7 +443,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hETUFK5TEeWTSPgawmoa3g" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_TpvMYK5TEeWTSPgawmoa3g" name="replicas : EInt = 1" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@59155811{platform:/resource/com.isb.at.openshift.model/model/openshift.ecore#//ReplicationController/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_TpvMYK5TEeWTSPgawmoa3g" name="replicas : EInt = 1" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="openshift.ecore#//ReplicationController/replicas"/>
           <semanticElements xmi:type="ecore:EAttribute" href="openshift.ecore#//ReplicationController/replicas"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hEVJQK5TEeWTSPgawmoa3g" labelAlignment="LEFT">

@@ -3,6 +3,7 @@ package tooling.features.template;
 import openshift.Template;
 
 import org.eclipse.graphiti.features.IAddFeature;
+import org.eclipse.graphiti.features.IDirectEditingInfo;
 import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.IAddContext;
 import org.eclipse.graphiti.features.impl.AbstractAddShapeFeature;
@@ -112,7 +113,26 @@ public class AddTemplateFeature extends AbstractAddShapeFeature implements
  
             // create link and wire it
             link(shape, addedClass);
+            
+            //Soporte para direct-editing
+            // provide information to support direct-editing directly 
+            // after object creation (must be activated additionally)
+            	IDirectEditingInfo directEditingInfo = getFeatureProvider().getDirectEditingInfo();
+            // set container shape for direct editing after object creation
+            directEditingInfo.setMainPictogramElement(containerShape);
+            // set shape and graphics algorithm where the editor for
+            // direct editing shall be opened after object creation
+            directEditingInfo.setPictogramElement(shape);
+            directEditingInfo.setGraphicsAlgorithm(text);
+            
+            //Fin de soporte para direct-editing
+            
         }
+        
+        
+       
+        
+        
         
         peCreateService.createChopboxAnchor(containerShape);
         

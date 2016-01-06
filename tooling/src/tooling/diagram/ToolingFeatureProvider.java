@@ -8,13 +8,16 @@ import org.eclipse.graphiti.dt.IDiagramTypeProvider;
 import org.eclipse.graphiti.features.IAddFeature;
 import org.eclipse.graphiti.features.ICreateConnectionFeature;
 import org.eclipse.graphiti.features.ICreateFeature;
+import org.eclipse.graphiti.features.IDirectEditingFeature;
 import org.eclipse.graphiti.features.IFeature;
 import org.eclipse.graphiti.features.ILayoutFeature;
 import org.eclipse.graphiti.features.context.IAddConnectionContext;
 import org.eclipse.graphiti.features.context.IAddContext;
+import org.eclipse.graphiti.features.context.IDirectEditingContext;
 import org.eclipse.graphiti.features.context.ILayoutContext;
 import org.eclipse.graphiti.features.context.IPictogramElementContext;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
+import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.ui.features.DefaultFeatureProvider;
 
 import tooling.features.AddEReferenceConnectionFeature;
@@ -27,6 +30,7 @@ import tooling.features.service.CreateServiceFeature;
 import tooling.features.service.LayoutServiceFeature;
 import tooling.features.template.AddTemplateFeature;
 import tooling.features.template.CreateTemplateFeature;
+import tooling.features.template.DirectEditTemplateFeature;
 import tooling.features.template.LayoutTemplateFeature;
 
 public class ToolingFeatureProvider extends DefaultFeatureProvider {
@@ -83,5 +87,16 @@ public class ToolingFeatureProvider extends DefaultFeatureProvider {
 	public IFeature[] getDragAndDropFeatures(IPictogramElementContext context) {
 	    // simply return all create connection features
 	    return getCreateConnectionFeatures();
+	}
+	
+	@Override
+	public IDirectEditingFeature getDirectEditingFeature(
+	    IDirectEditingContext context) {
+	    PictogramElement pe = context.getPictogramElement();
+	    Object bo = getBusinessObjectForPictogramElement(pe);
+	    if (bo instanceof Template) {
+	        return new DirectEditTemplateFeature(this);
+	    }
+	    return super.getDirectEditingFeature(context);
 	}
 }

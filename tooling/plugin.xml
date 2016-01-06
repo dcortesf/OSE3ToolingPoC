@@ -21,5 +21,39 @@
          </diagramType>
       </diagramTypeProvider>
    </extension>
+   
+   <!-- Sheet -->
+   
+   <extension
+    point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+    <propertyContributor contributorId="OpenShift.PropertyContributor"> 
+        <propertyCategory category="Graphiti"> 
+        </propertyCategory> 
+    </propertyContributor> 
+</extension>
+       
+<extension
+      point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+   <propertyTabs
+          contributorId="OpenShift.PropertyContributor">
+   <propertyTab
+         category="Graphiti"
+         id="graphiti.main.tab"
+         label="Main">
+    </propertyTab>
+   </propertyTabs>
+</extension>
+     
+<extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="OpenShift.PropertyContributor">
+        <propertySection
+              class="tooling.tab.template.OpenShiftTemplateSection"
+              filter="tooling.tab.template.OpenShiftTemplateFilter"
+              id="graphiti.main.tab.emfclass"
+              tab="graphiti.main.tab">
+        </propertySection>
+    </propertySections>
+</extension>
 
 </plugin>

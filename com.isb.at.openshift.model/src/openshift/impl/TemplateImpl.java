@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link openshift.impl.TemplateImpl#getTemplateHasServices <em>Template Has Services</em>}</li>
  *   <li>{@link openshift.impl.TemplateImpl#getName <em>Name</em>}</li>
+ *   <li>{@link openshift.impl.TemplateImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,6 +62,26 @@ public class TemplateImpl extends MinimalEObjectImpl.Container implements Templa
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,6 +140,27 @@ public class TemplateImpl extends MinimalEObjectImpl.Container implements Templa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OpenshiftPackage.TEMPLATE__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -126,6 +168,8 @@ public class TemplateImpl extends MinimalEObjectImpl.Container implements Templa
 				return getTemplateHasServices();
 			case OpenshiftPackage.TEMPLATE__NAME:
 				return getName();
+			case OpenshiftPackage.TEMPLATE__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -146,6 +190,9 @@ public class TemplateImpl extends MinimalEObjectImpl.Container implements Templa
 			case OpenshiftPackage.TEMPLATE__NAME:
 				setName((String)newValue);
 				return;
+			case OpenshiftPackage.TEMPLATE__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -164,6 +211,9 @@ public class TemplateImpl extends MinimalEObjectImpl.Container implements Templa
 			case OpenshiftPackage.TEMPLATE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case OpenshiftPackage.TEMPLATE__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -180,6 +230,8 @@ public class TemplateImpl extends MinimalEObjectImpl.Container implements Templa
 				return templateHasServices != null && !templateHasServices.isEmpty();
 			case OpenshiftPackage.TEMPLATE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case OpenshiftPackage.TEMPLATE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -196,6 +248,8 @@ public class TemplateImpl extends MinimalEObjectImpl.Container implements Templa
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}
